@@ -169,20 +169,12 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/categories/开发工具/">玩转开发工具</a></li>
-                        
-                            <li><a href="/categories/digital">玩转数码</a></li>
-                        
-                            <li><a href="/categories/algorithm">算法学习</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl github" target="_blank" href="/xxxxx" title="github">github</a>
+                                <a class="fl github" target="_blank" href="https://github.com/liudiediea" title="github">github</a>
                             
                                 <a class="fl weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
                             
@@ -215,7 +207,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                    <div id="js-aboutme">书读得不多 正在努力中的小白</div>
                 </section>
                 
             </div>
@@ -246,21 +238,13 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
-                
-                    <li><a href="/categories/digital">玩转数码</a></li>
-                
-                    <li><a href="/categories/algorithm">算法学习</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
             <nav class="header-nav">
                 <div class="social">
                     
-                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                        <a class="github" target="_blank" href="https://github.com/liudiediea" title="github">github</a>
                     
                         <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
                     
@@ -302,44 +286,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<h3 id="前后端数据交互"><a href="#前后端数据交互" class="headerlink" title="前后端数据交互"></a>前后端数据交互</h3><ol><br>    <li>form表单：通过form表单以get/post方式提交数据（最原始）<br>    缺点：在提交的时候可能会导致页面跳转或刷新 用户体验不好<br>           　　　 单项提交 不知道后台会给出什么响应</li><br>    <li>ajax：返回数据一般为json形式</li><br></ol>
-
-<h3 id="php的魔术方法"><a href="#php的魔术方法" class="headerlink" title="php的魔术方法"></a>php的魔术方法</h3><ul>
-<li>__construct</li>
-</ul>
-<ul>
-<li>__set()</li>
-<li>__isset()</li>
-<li>__unset()</li>
-<li>__clone() </li>
-<li>__sleep()</li>
-</ul>
-<h3 id="php处理数组的函数"><a href="#php处理数组的函数" class="headerlink" title="php处理数组的函数"></a>php处理数组的函数</h3><ul>
-<li>array() 　　　　　　　　创建工资</li>
-<li>in_array() 　　　　　　 判断元素是否存在数组中</li>
-<li>array_merge() 　　　　 合并数组</li>
-<li>count() 　　　　　　　　返回数组中元素的个数</li>
-<li>array_keys() 　　　　　获取数组的key</li>
-<li>array_values() 　　　　获取数组中的value</li>
-</ul>
-<h3 id="php处理字符串的函数"><a href="#php处理字符串的函数" class="headerlink" title="php处理字符串的函数"></a>php处理字符串的函数</h3><ul>
-<li>trim()　　　　　　移除字符串两侧的空白</li>
-<li>strlen()　　　　　获取字符串的长度</li>
-<li>substr()　　　　　截取字符串的一部分</li>
-<li>strstr()　　　　　找到字符串首字母出现的位置</li>
-</ul>
-<h3 id="数据库的三种范式"><a href="#数据库的三种范式" class="headerlink" title="数据库的三种范式"></a>数据库的三种范式</h3><li>第一范式：（1NF）无重复的列</li><br><li>第二范式：（2NF）属性完全依赖于主键</li><br><li>第三范式：（3NF）属性不依赖于其他非主属性</li>
-
-<h3 id="消息队列的两种模式"><a href="#消息队列的两种模式" class="headerlink" title="消息队列的两种模式"></a>消息队列的两种模式</h3><p>　　点对点：不可重复消费<br>　　发布/订阅：可重复消费</p>
-<h3 id="redis实现消息队列"><a href="#redis实现消息队列" class="headerlink" title="redis实现消息队列"></a>redis实现消息队列</h3><p>　　brpop(消费者)：从队列右侧<strong>弹出</strong>数据 如果队列中没有数据就<strong>堵塞</strong>等待<br>　　lpush(生产者)：从队列左侧添加数据</p>
-<h3 id="redis应用场景"><a href="#redis应用场景" class="headerlink" title="redis应用场景"></a>redis应用场景</h3><ol><br><li>会话缓存（最常用）</li><br><li>消息队列 　比如：支付</li><br><li>活动排行榜或计数</li><br><li>发布，订阅消息</li><br></ol>
-
-<h3 id="redis-危险命令"><a href="#redis-危险命令" class="headerlink" title="redis 危险命令"></a>redis 危险命令</h3><p>　　flushall 　　清空所有记录,数据库<br>　　flushdb 　　 清空数据库<br>　　config 　　　客户端连接后可配置服务器<br>　　keys　　　　 客户端链接后可查看所有存在的键</p>
-<h3 id="contet-type-常见格式"><a href="#contet-type-常见格式" class="headerlink" title="contet-type 常见格式"></a>contet-type 常见格式</h3><p>　　text/html<br>　　text/plain<br>　　text/xml<br>　　image/gif<br>　　image/jpeg<br>　　image/png</p>
-
+              <p><strong> php面试题：</strong> <excerpt in="" index="" |="" 首页摘要=""><br>最近一直在准备面试 整理了一些面试题<br>
+          
       
-    </div>
+    </excerpt></p></div>
     
     <div class="article-info article-info-index">
       
@@ -354,6 +304,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2018/12/19/php面试题/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -402,17 +356,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<p>hexo和coding打造静态博客 ：<br>使用hexo一年有余，对所有主题都感觉有所缺陷，便修改了一个自用黑色主题，本主题以黑色和蓝色为主，色彩鲜明，主题明确。<br>&nbsp;</p>
-<h2 id="black-blue主题来源"><a href="#black-blue主题来源" class="headerlink" title="black-blue主题来源"></a>black-blue主题来源</h2><p></p><p>本主题修改自spfk主题，但之前spfk主题有很多问题，本主题改进如下：</p><p></p>
-<ol><li>压缩js，css提高性能</li><li>代码段样式显示更完美</li><li>增加本地搜索</li><li>设置更合适的字体大小</li><li>颜色以黑色和蓝色为主，色彩鲜明</li><li>seo适当优化</li><li>删除多说，有言，增加畅言评论</li><li>删除stylus，全部改用css方便修改</li><br></ol>
-
-<h2 id="主题地址"><a href="#主题地址" class="headerlink" title="主题地址"></a>主题地址</h2><p><a href="https://github.com/liudiediea/black-blue" target="_blank" rel="noopener">black-blue</a></p>
-<h2 id="black-blue主题配置"><a href="#black-blue主题配置" class="headerlink" title="black-blue主题配置"></a>black-blue主题配置</h2><h3 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h3><p>复制主题到themes目录下 <code>cd themed &amp;&amp; clone https://github.com/liudiediea/black-blue</code>，修改_config.yml文件 <code>theme:black-blue</code></p>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>菜单配置</p>
-
+              <p><strong> hexo自用黑色主题：</strong> <excerpt in="" index="" |="" 首页摘要=""><br>关于black-blue模版的相关配置<br>
+          
       
-    </div>
+    </excerpt></p></div>
     
     <div class="article-info article-info-index">
       
@@ -427,6 +374,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2018/12/17/hexo自用黑色主题/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -475,16 +426,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<h3 id="1-active-class是哪个组件的属性-嵌套路由怎么定义"><a href="#1-active-class是哪个组件的属性-嵌套路由怎么定义" class="headerlink" title="1.active-class是哪个组件的属性?嵌套路由怎么定义"></a>1.active-class是哪个组件的属性?嵌套路由怎么定义</h3><p>答：vue-router模板的router-link组件</p>
-<h3 id="2、怎么定义vue-router的动态路由？怎么获取传过来的动态参数？"><a href="#2、怎么定义vue-router的动态路由？怎么获取传过来的动态参数？" class="headerlink" title="2、怎么定义vue-router的动态路由？怎么获取传过来的动态参数？"></a>2、怎么定义vue-router的动态路由？怎么获取传过来的动态参数？</h3><p>答：在router目录下的index.js文件中，对path属性加上/:id。  使用router对象的params.id</p>
-<h3 id="3、vue-router有哪几种导航钩子？"><a href="#3、vue-router有哪几种导航钩子？" class="headerlink" title="3、vue-router有哪几种导航钩子？"></a>3、vue-router有哪几种导航钩子？</h3><p>答：三种，一种是全局导航钩子：router.beforeEach(to,from,next) 作用：跳转前进行判断拦截。<br>第二种：组件内的钩子；<br>第三种：单独路由独享组件</p>
-<h3 id="6、v-model是什么？怎么使用？-vue中标签怎么绑定事件？"><a href="#6、v-model是什么？怎么使用？-vue中标签怎么绑定事件？" class="headerlink" title="6、v-model是什么？怎么使用？ vue中标签怎么绑定事件？"></a>6、v-model是什么？怎么使用？ vue中标签怎么绑定事件？</h3><p>答：可以实现双向绑定，指令（v-class、v-for、v-if、v-show、v-on）。vue的model层的data属性<br>绑定事件：<code>&lt;input @click=doLog() /&gt;</code></p>
-<h3 id="10、vuex是什么？怎么使用？哪种功能场景使用它？"><a href="#10、vuex是什么？怎么使用？哪种功能场景使用它？" class="headerlink" title="10、vuex是什么？怎么使用？哪种功能场景使用它？"></a>10、vuex是什么？怎么使用？哪种功能场景使用它？</h3><p>答：vue框架中状态管理。在main.js引入store，注入。新建了一个目录store，….. export<br>场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车</p>
-<h3 id="11、mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？"><a href="#11、mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？" class="headerlink" title="11、mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？"></a>11、mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？</h3><p>答：一个model+view+viewModel框架，数据模型model，viewModel连接两个<br>区别：vue数据驱动，通过数据来显示视图层而不是节点操作。<br>场景：数据操作比较多的场景，更加便捷</p>
-
+              <p><strong> VUE前端面试题：</strong> <excerpt in="" index="" |="" 首页摘要=""><br>面了一家前端 面试前做一些准备<br>
+          
       
-    </div>
+    </excerpt></p></div>
     
     <div class="article-info article-info-index">
       
@@ -499,6 +444,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2018/12/14/VUE前端面试题/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
