@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="php面试题： 最近一直在准备面试 整理了一些面试题">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T11:40:38.766Z">
+<meta property="og:updated_time" content="2019-02-28T02:20:41.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php面试题">
 <meta name="twitter:description" content="php面试题： 最近一直在准备面试 整理了一些面试题">
@@ -302,8 +302,8 @@
       
           
         <p><strong> php面试题：</strong> <excerpt in="" index="" |="" 首页摘要=""><br>最近一直在准备面试 整理了一些面试题<br><a id="more"></a></excerpt></p>
-<h3 id="前后端数据交互"><a href="#前后端数据交互" class="headerlink" title="前后端数据交互"></a>前后端数据交互</h3><ol><br>    <li>form表单：通过form表单以get/post方式提交数据（最原始）<br>    缺点：在提交的时候可能会导致页面跳转或刷新 用户体验不好<br>           　　　 单项提交 不知道后台会给出什么响应</li><br>    <li>ajax：返回数据一般为json形式</li><br></ol>
-
+<h3 id="前后端数据交互"><a href="#前后端数据交互" class="headerlink" title="前后端数据交互"></a>前后端数据交互</h3><p>form表单：通过form表单以get/post方式提交数据（最原始）<br>         缺点：在提交的时候可能会导致页面跳转或刷新 用户体验不好<br>           　　　 单项提交 不知道后台会给出什么响应<br> ajax：核心是依赖浏览器提供的XHLHttpRequest对象向服务器发送请求和解析服务器响应提供了流畅的接口，浏览器可以发出HTTP请求和接收HTTP响应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	var xhr = new XHLHttpRequest()   //创建一个对象</span><br><span class="line">	xhr.open(&apos;GET&apos;,&apos;/helloAjax&apos;,false) // 设置ajax.open()方法里面的三个参数分别为：发送请求的方式，请求的url，是否异步发送请求的布尔值</span><br><span class="line">	xhr.send()  //发送请求</span><br><span class="line">	var data = xhr.responseText  //当请求到来时 读取数据</span><br><span class="line">	console.log(data)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="php的魔术方法"><a href="#php的魔术方法" class="headerlink" title="php的魔术方法"></a>php的魔术方法</h3><ul>
 <li>__construct</li>
 </ul>
@@ -328,8 +328,8 @@
 <li>substr()　　　　　截取字符串的一部分</li>
 <li>strstr()　　　　　找到字符串首字母出现的位置</li>
 </ul>
-<h3 id="数据库的三种范式"><a href="#数据库的三种范式" class="headerlink" title="数据库的三种范式"></a>数据库的三种范式</h3><li>第一范式：（1NF）无重复的列</li><br><li>第二范式：（2NF）属性完全依赖于主键</li><br><li>第三范式：（3NF）属性不依赖于其他非主属性</li>
-
+<h3 id="数据库的三大范式"><a href="#数据库的三大范式" class="headerlink" title="数据库的三大范式"></a>数据库的三大范式</h3><p>第一范式：（1NF）数据表中的每一列都必须是不可拆分的最小单元，确保每一列的原子性<br>第二范式：（2NF）满足1NF之后，要求表中的所有列都必须依赖于主键，不能有任何一列和主键没有关系<br>第三范式：（3NF）满足2NF之后，要求表中的每一列都与主键是直接相关而不是间接相关</p>
+<h3 id="数据库的五大约束"><a href="#数据库的五大约束" class="headerlink" title="数据库的五大约束"></a>数据库的五大约束</h3><p>   1.primary key:设置主键约束<br>   2.unique：设置唯一性约束，不能有重复值<br>   3.default: 默认值约束<br>   4.not null: 设置非空约束，该字段不能为空<br>   5.foreign key:设置外键约束</p>
 <h3 id="消息队列的两种模式"><a href="#消息队列的两种模式" class="headerlink" title="消息队列的两种模式"></a>消息队列的两种模式</h3><p>　　点对点：不可重复消费<br>　　发布/订阅：可重复消费</p>
 <h3 id="redis实现消息队列"><a href="#redis实现消息队列" class="headerlink" title="redis实现消息队列"></a>redis实现消息队列</h3><p>　　brpop(消费者)：从队列右侧<strong>弹出</strong>数据 如果队列中没有数据就<strong>堵塞</strong>等待<br>　　lpush(生产者)：从队列左侧添加数据</p>
 <h3 id="redis应用场景"><a href="#redis应用场景" class="headerlink" title="redis应用场景"></a>redis应用场景</h3><ol><br><li>会话缓存（最常用）</li><br><li>消息队列 　比如：支付</li><br><li>活动排行榜或计数</li><br><li>发布，订阅消息</li><br></ol>
@@ -348,7 +348,7 @@
         <p><span>本文标题:</span><a href="/2018/12/19/php面试题/">php面试题</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 刘喋喋 的个人博客">刘喋喋</a></p>
         <p><span>发布时间:</span>2018年12月19日 - 15时08分</p>
-        <p><span>最后更新:</span>2018年12月20日 - 19时40分</p>
+        <p><span>最后更新:</span>2019年02月28日 - 10时20分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/19/php面试题/" title="php面试题">http://yoursite.com/2018/12/19/php面试题/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/12/19/php面试题/　　作者: 刘喋喋" title=""></span>
@@ -385,7 +385,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前后端数据交互"><span class="toc-number">1.</span> <span class="toc-text">前后端数据交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php的魔术方法"><span class="toc-number">2.</span> <span class="toc-text">php的魔术方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php处理数组的函数"><span class="toc-number">3.</span> <span class="toc-text">php处理数组的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php处理字符串的函数"><span class="toc-number">4.</span> <span class="toc-text">php处理字符串的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库的三种范式"><span class="toc-number">5.</span> <span class="toc-text">数据库的三种范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息队列的两种模式"><span class="toc-number">6.</span> <span class="toc-text">消息队列的两种模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis实现消息队列"><span class="toc-number">7.</span> <span class="toc-text">redis实现消息队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis应用场景"><span class="toc-number">8.</span> <span class="toc-text">redis应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis-危险命令"><span class="toc-number">9.</span> <span class="toc-text">redis 危险命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#contet-type-常见格式"><span class="toc-number">10.</span> <span class="toc-text">contet-type 常见格式</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前后端数据交互"><span class="toc-number">1.</span> <span class="toc-text">前后端数据交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php的魔术方法"><span class="toc-number">2.</span> <span class="toc-text">php的魔术方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php处理数组的函数"><span class="toc-number">3.</span> <span class="toc-text">php处理数组的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php处理字符串的函数"><span class="toc-number">4.</span> <span class="toc-text">php处理字符串的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库的三大范式"><span class="toc-number">5.</span> <span class="toc-text">数据库的三大范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库的五大约束"><span class="toc-number">6.</span> <span class="toc-text">数据库的五大约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息队列的两种模式"><span class="toc-number">7.</span> <span class="toc-text">消息队列的两种模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis实现消息队列"><span class="toc-number">8.</span> <span class="toc-text">redis实现消息队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis应用场景"><span class="toc-number">9.</span> <span class="toc-text">redis应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis-危险命令"><span class="toc-number">10.</span> <span class="toc-text">redis 危险命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#contet-type-常见格式"><span class="toc-number">11.</span> <span class="toc-text">contet-type 常见格式</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
