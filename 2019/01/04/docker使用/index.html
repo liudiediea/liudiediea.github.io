@@ -403,7 +403,7 @@ height:50vh;
     <article class="article-entry">
         <h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><a id="more"></a>
 <p>Docker 是一个开源的应用容器引擎。</p>
-<p><img src="http://ppotzhwnv.bkt.clouddn.com/f578ecf9de754e5fa72532ec7de0149a%21400x400.jpeg" alt="image"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180029.png" alt="image"></p>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
 <li>环境一次安装，到处运行</li>
 </ul>
@@ -412,7 +412,7 @@ height:50vh;
 <li>与虚拟机的关系</li>
 </ul>
 <p>Docker 是<code>容器技术</code>，和虚拟机非常像，都可以在主机上隔离出多个独立的子系统，它们最大的区别在于虚拟机是从主机中完全隔离出一个系统来，而容器技术和主机是共享系统内核的。</p>
-<p><img src="assets/image-20181203085309186-3798389.png" alt="image-20181203085309186"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180053.png" alt="image-20181203085309186"></p>
 <p>由于 Docker 与主机共享内核，所以有以下优势：</p>
 <p>1、速度更快</p>
 <p>​    Docker不停地给大家宣传，”虚拟机需要数分钟启动，而Docker容器只需要50毫秒”。</p>
@@ -426,11 +426,11 @@ height:50vh;
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Docker 可以安装、运行在常见的 Linux 系统上，而对于 Windows 和 Mac 系统也有办法安装上。</p>
 <p>Windows：如果是 Windows10专业版，可以直接安装，如果是老的版本需要安装Docker虚拟机。</p>
 <p>安装之后，可以在命令行中执行 <code>docker</code> 指令：</p>
-<p><img src="assets/image-20181202190931446-3748971.png" alt="image-20181202190931446"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180056.png" alt="image-20181202190931446"></p>
 <h1 id="使用-Docker"><a href="#使用-Docker" class="headerlink" title="使用 Docker"></a>使用 Docker</h1><h2 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h2><p>镜像（image）：已经打包好的 Docker 应用，有点类似于一个程序的安装包。</p>
 <p>镜像仓库：存储镜像的服务器。</p>
 <p>容器：有了镜像我们就可以创建容器了，容器就是运行着的镜像，一个镜像可以同时创建多个容器，容器之间的隔离的。</p>
-<p><img src="assets/image-20181203085625272-3798585.png" alt="image-20181203085625272"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180059.png" alt="image-20181203085625272"></p>
 <h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><table>
 <thead>
 <tr>
@@ -505,9 +505,9 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name mysql001 -d -p 33306:3306 -e MYSQL_ROOT_PASSWORD=123123 mysql:5.7.24</span><br></pre></td></tr></table></figure>
 <p>说明：MYSQL_ROOT_PASSWORD 环境变量用来设置这个容器中 MySQL 的密码</p>
 <p>创建之后，会启动这个容器，如果启动成功，就可以使用 <code>docker ps</code> 指令查看到：</p>
-<p><img src="assets/image-20181202200118787-3752078.png" alt="image-20181202200118787"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180103.png" alt="image-20181202200118787"></p>
 <p>启动之后，这个容器内部就运行了 MySQL 服务器，在容器内部监听的是 3306 端口，我们已经将这个端口绑定到了主机的 33306 端口上，所以我们在主机上可以使用 33306 端口连接：</p>
-<p><img src="assets/image-20181202200256983-3752177.png" alt="image-20181202200256983"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180106.png" alt="image-20181202200256983"></p>
 <h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><p>有时我们需要进入到一个容器内部去操作这个容器，这时我们可以使用 <code>docker exec</code> 指令来实现。</p>
 <p>docker exec 指令可以执行一个运行着的容器中的命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it 容器名称 命令</span><br></pre></td></tr></table></figure>
@@ -517,12 +517,12 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mysql001 /bin/sh</span><br></pre></td></tr></table></figure>
 <p>-it：以实时交互的形式运行（和 -d 正好相反）</p>
 <p>执行之后就进入到了容器中，然后我们输入的命令是在容器中执行的</p>
-<p><img src="assets/image-20181202200656835-3752416.png" alt="image-20181202200656835"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180109.png" alt="image-20181202200656835"></p>
 <p>执行 <code>exit</code> 指令可以退出容器。</p>
 <h2 id="链接容器"><a href="#链接容器" class="headerlink" title="链接容器"></a>链接容器</h2><p>Docker 推荐我们一个容器中只运行一个主要的应用程序，比如，我们要运行一个 PHP + MySQL 的程序，那么我们应该把 PHP 和 MySQL 放到两个容器中：</p>
-<p><img src="assets/image-20181202201722070-3753042.png" alt="image-20181202201722070"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180112.png" alt="image-20181202201722070"></p>
 <p>默认情况下，容器之间是不能直接通信的，如果要通信必须在创建 PHP 容器时使用 <code>--link</code> 参数建立和 MySQL 容器的链接：</p>
-<p><img src="assets/image-20181202201858964-3753139.png" alt="image-20181202201858964"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180117.png" alt="image-20181202201858964"></p>
 <p>建立连接的参数说明：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--link 要连接的容器的名称 : 别名</span><br></pre></td></tr></table></figure>
 <p>在容器中可以使用别名来访问连接的容器。</p>
@@ -536,7 +536,7 @@ height:50vh;
 <p>示例：安装 wordpress（一个开源的使用 PHP+MYQS 开发的内容管理系统 ）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name wordpress --link mysql001:mysql -p 8080:80 -d wordpress</span><br></pre></td></tr></table></figure>
 <p>创建 wordpress 容器时，发现本地没有镜像就会自动下载最新的镜像，下载完之后就创建了容器，然后我们就可以在浏览器中访问 8080 端口：</p>
-<p><img src="assets/image-20181202205110002-3755070.png" alt="image-20181202205110002"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180253.png" alt="image-20181202205110002"></p>
 <p>这样，我们就使用部署 wordpress 到我们的电脑上了。</p>
 <h2 id="挂载硬盘"><a href="#挂载硬盘" class="headerlink" title="挂载硬盘"></a>挂载硬盘</h2><p>问题一、数据是保存在容器里的，如果容器删除了数据也就删除了。</p>
 <p>问题二、每次要修改容器时，必须要进入到容器中去修改，比如要修改my.cnf。</p>
@@ -575,7 +575,7 @@ height:50vh;
 <p>以上这三种只适用于开发时使用，在真正的线上环境我们需要安装更加稳定并且能够支撑高并发的运行环境，目前 PHP 的生产环境最常用的就是 <code>LNMP</code>。</p>
 <p>LNMP：Linux + Nginx + MySQL + PHP</p>
 <h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p>Nginx 是目前最流行的高性能、高并发的开源、免费的 WEB 服务器，俄国斯的开发。</p>
-<p><img src="assets/image-20181203100116793-3802476.png" alt="image-20181203100116793"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180257.png" alt="image-20181203100116793"></p>
 <p>Nginx 使用 Linux 中最流行的 <code>epoll</code> 做为事件处理机制，并且 Nginx 在运行时只消耗极少的系统资源，所以可以轻松实现上万的并发请求，Nginx 除了可以做为 WEB 服务器之外，还可以做为Email、反向代理、负载均衡、流媒体等服务器。</p>
 <p>Nginx 和其它脚本语言（如PHP）一起工作时一般使用 FastCGI 机制。</p>
 <h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>方案一、一个容器中同时 nginx php-mpm </p>
@@ -586,7 +586,7 @@ height:50vh;
 <p>​    缺点：部署相对复杂</p>
 <h2 id="LNMP-模型图"><a href="#LNMP-模型图" class="headerlink" title="LNMP 模型图"></a>LNMP 模型图</h2><p>创建三个容器：Nginx、PHP-FPM、MySQL，它们之间的关系是：</p>
 <p>（说明：图中端口可以任意修改）</p>
-<p><img src="assets/image-20181203100531441-3802731.png" alt="image-20181203100531441"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180300.png" alt="image-20181203100531441"></p>
 <p>总结：Nginx 负载处理静态文件，如果用户访问的是 PHP 文件，就转发给 PHP 服务器的9000来处理，PHP服务器处理完之后，把结果返回给 nginx,然后nginx再返回给前端。</p>
 <p>1、下载镜像</p>
 <p>下载 nginx 镜像（alpine版的更小）</p>
@@ -595,7 +595,7 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.27.24</span><br></pre></td></tr></table></figure>
 <p>下载 PHP-FPM 镜像</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull php:7.2-fpm-alpine</span><br></pre></td></tr></table></figure>
-<p><img src="assets/image-20181203104220103-3804940.png" alt="image-20181203104220103"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180303.png" alt="image-20181203104220103"></p>
 <p>2、创建容器</p>
 <p>我们创建三个容器 Nginx、PHP-FPM、MySQL，这里需要注意的是它们创建的顺序：</p>
 <p>MySQL =&gt; PHP-FPM =&gt; Nginx</p>
@@ -627,7 +627,7 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /php</span><br></pre></td></tr></table></figure>
 <p>然后我们就可以在 /php 目录中创建  php 脚本了，这些脚本就可以通过浏览器运行访问了。</p>
 <p>Nginx 运行PHP的流程：</p>
-<p><img src="assets/image-20181203115802443-3809482.png" alt="image-20181203115802443"></p>
+<p><img src="http://ppouea5tn.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190409180314.png" alt="image-20181203115802443"></p>
 <p>a、nginx 判断访问的文件以 .php 结尾</p>
 <p>b、nginx 将 /php/1.php 这个路径传给 PHP 的9000端口</p>
 <p>c、PHP接收到nginx传过来的路径，就在本机中读取这个文件并运行</p>
@@ -661,7 +661,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com">刘喋喋</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/01/04/docker使用/">http://yoursite.com/2019/01/04/docker使用/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/01/04/docker使用/">January 4th 2019, 9:26:37 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/01/04/docker使用/">April 9th 2019, 5:36:34 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/01/04/docker使用/">April 9th 2019, 6:12:29 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
